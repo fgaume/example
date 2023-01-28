@@ -16,7 +16,7 @@ pipeline {
 
                 sh '''
 
-          ls
+          java -version
 
         '''
 
