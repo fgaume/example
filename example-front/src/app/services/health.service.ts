@@ -1,8 +1,14 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
+export interface BuildInfos {
+  name: string;
+  time: string;
+  version: string;
+}
+
 export interface Health {
-  status: string;
+  build: BuildInfos;
 }
 
 @Injectable({
@@ -11,7 +17,7 @@ export interface Health {
 export class HealthService {
 //  private url = 'https://jsonplaceholder.typicode.com/todos/1';
 
-  private url = '/management/health';
+  private url = '/management/info';
 
   constructor(private httpClient: HttpClient) { }
 

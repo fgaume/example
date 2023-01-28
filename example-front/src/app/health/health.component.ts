@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Health, HealthService } from '../services/health.service';
+import { Health, BuildInfos, HealthService } from '../services/health.service';
 
 @Component({
   selector: 'app-health',
@@ -11,7 +11,9 @@ export class HealthComponent {
   health: Health;
 
   constructor(private healthService: HealthService) {
-    this.health = { 'status' : '...'};
+    this.health = {
+      build: { name: '', time: '', version: ''}
+    }
   }
 
   ngOnInit() {
