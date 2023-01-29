@@ -54,7 +54,7 @@ pipeline {
 
         }
 
-        stage('cat README') {
+        stage('cat README2') {
 
             when {
 
