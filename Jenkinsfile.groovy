@@ -40,7 +40,7 @@ pipeline {
 
     stages {
 
-        stage('Hello java') {
+        stage('Hello java 2') {
 
             steps {
 
